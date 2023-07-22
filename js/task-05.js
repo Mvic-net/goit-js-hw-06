@@ -3,12 +3,6 @@ const refs = {
   nameOutput: document.getElementById("name-output"),
 };
 
-// refs.nameInput.addEventListener("input", onInputChange);
-
-// function onInputChange(event) {
-//   refs.nameOutput.textContent = event.currentTarget.value;
-// }
-
 refs.nameInput.addEventListener("input", () => {
   const inputValue = refs.nameInput.value.trim();
 
