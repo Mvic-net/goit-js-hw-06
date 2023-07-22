@@ -16,24 +16,11 @@ const images = [
 const imageList = document.querySelector(".gallery");
 
 const imageItem = images.map((image) => {
-  const imageEl = `<li><img src=${image.url} alt=${image.alt}/></li>`;
+  const imageEl = `<li><img class='img-decoration' src=${image.url} alt=${image.alt}/></li>`;
+
+  console.log(imageEl);
 
   return imageEl;
 });
 imageList.insertAdjacentHTML("beforeend", imageItem);
-
-const galleryDecorImg = document.querySelectorAll("img");
-const galleryDecorItem = document.querySelectorAll("li");
-
-imageList.style.listStyle = "none";
-imageList.style.display = "flex";
-imageList.style.flexDirection = "column-reverse";
-
-galleryDecorImg.forEach((element) => {
-  element.style.width = "300px";
-  element.style.borderRadius = "50%";
-});
-
-// console.log(galleryDecorImg);
-// console.log(galleryDecorItem);
-// console.log(galleryDecorList);
+imageList.classList.add("list");

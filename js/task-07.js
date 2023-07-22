@@ -5,10 +5,12 @@ const refs = {
 
 console.log(refs.getInput.value);
 
-refs.getSpan.style.fontSize = `${refs.getInput.value}px`;
+// refs.getSpan.style.fontSize = `${refs.getInput.value}px`;
 
-refs.getInput.addEventListener("input", onInputChange);
-
-function onInputChange(event) {
-  refs.getSpan.style.fontSize = `${event.target.value}px`;
+function onInputChange() {
+  refs.getSpan.style.fontSize = `${refs.getInput.value}px`;
 }
+refs.getInput.addEventListener("input", onInputChange);
+console.log();
+
+onInputChange();

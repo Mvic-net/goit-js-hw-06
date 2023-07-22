@@ -9,15 +9,19 @@ const ingredients = [
 
 const listIngredients = document.querySelector("#ingredients");
 
-console.log(listIngredients);
+// console.log(listIngredients);
 
 const itemIngredients = ingredients.map((ingredient) => {
   const liEL = document.createElement("li");
   liEL.classList.add("item");
 
-  const liText = (liEL.textContent = ingredient);
+  liEL.textContent = ingredient;
 
-  listIngredients.appendChild(liEL);
+  // console.dir(liEL);
+  // console.log(liEL.textContent);
+
+  return liEL;
 });
+// console.log(itemIngredients);
 
-document.body.appendChild(listIngredients);
+listIngredients.prepend(...itemIngredients);

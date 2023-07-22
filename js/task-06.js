@@ -4,12 +4,16 @@ const refs = {
 
 refs.getInput.addEventListener("blur", () => {
   const lengthInput = refs.getInput.dataset.length;
-  const valueLength = refs.getInput.value.length;
+  const valueLength = refs.getInput.value.trim().length;
 
-  if (valueLength === Number(lengthInput)) {
+  if (valueLength == lengthInput) {
     refs.getInput.classList.add("valid");
     refs.getInput.classList.remove("invalid");
   } else {
     refs.getInput.classList.add("invalid");
+    refs.getInput.classList.remove("valid");
   }
+
+  console.log(lengthInput);
+  console.log(valueLength);
 });

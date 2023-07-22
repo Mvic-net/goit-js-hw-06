@@ -10,7 +10,7 @@ const refs = {
 // }
 
 refs.nameInput.addEventListener("input", () => {
-  const inputValue = refs.nameInput.value;
+  const inputValue = refs.nameInput.value.trim();
 
   if (inputValue !== "") {
     refs.nameOutput.textContent = inputValue;
